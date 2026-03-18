@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Lê Chiến - Lập trình viên</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .cv-container {
+            width: 800px;
+            background-color: #ffffff;
+            display: flex;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            min-height: 1130px; /* Tỉ lệ gần chuẩn A4 */
+        }
+
+        /* ----- LEFT SIDEBAR ----- */
+        .sidebar {
+            width: 35%;
+            background-color: #9b5153; /* Màu đỏ đô giống ảnh */
+            color: #ffffff;
+            padding: 30px 20px;
+        }
+
+        .profile-pic-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+        }
+
+        .name-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .name-title h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .name-title h2 {
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .contact-info {
+            margin-bottom: 30px;
+            font-size: 13px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .contact-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #b07071;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+            font-size: 10px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-transform: capitalize;
+        }
+
+        .objective-text {
+            font-size: 13px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .skill-item {
+            margin-bottom: 15px;
+        }
+
+        .skill-name {
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .progress-bar-bg {
+            background-color: #7a3e40;
+            height: 8px;
+            width: 100%;
+        }
+
+        .progress-bar-fill {
+            background-color: #d8c4c4;
+            height: 100%;
+            width: 80%; /* Chiều dài thanh kỹ năng */
+        }
+
+        .hobbies-list {
+            list-style-type: disc;
+            padding-left: 20px;
+            font-size: 13px;
+            line-height: 2;
+        }
+
+        /* ----- RIGHT MAIN CONTENT ----- */
+        .main-content {
+            width: 65%;
+            padding: 30px 30px 30px 40px;
+            color: #333333;
+        }
+
+        .main-section {
+            margin-bottom: 30px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .section-icon {
+            width: 30px;
+            height: 30px;
+            background-color: #9b5153;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 15px;
+            font-size: 14px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .item {
+            margin-bottom: 20px;
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+
+        .item-title {
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .item-date {
+            font-size: 13px;
+        }
+
+        .item-subtitle {
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .item-list {
+            list-style-type: none; /* Dùng custom bullet cho giống ảnh */
+            padding-left: 15px;
+        }
+
+        .item-list li {
+            font-size: 13px;
+            line-height: 1.6;
+            margin-bottom: 6px;
+            position: relative;
+            text-align: justify;
+        }
+
+        .item-list li::before {
+            content: "•";
+            position: absolute;
+            left: -15px;
+            font-size: 16px;
+            top: -2px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        
+        <div class="sidebar">
+            <div class="profile-pic-container">
+                <img src="Hình Thẻ VLU.jpg" alt="Đoàn Thiên Phước" class="profile-pic">
+            </div>
+
+            <div class="name-title">
+                <h1>Đoàn Thiên Phước</h1>
+                <h2>Lập trình viên</h2>
+            </div>
+
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <span>0948-342-371</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <span>phuoc.2474802010319@vanlanguni.vn</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <span>41F/44/1 Đặng Thùy Trâm, phường Bình Lợi Trung, quận Bình Thạnh, thành phố Hồ Chí Minh</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <span>02/07/2006</span>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-user"></i></div>
+                    <span>Nam</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Mục tiêu nghề nghiệp</h3>
+                <p class="objective-text">
+                    Với tư duy logic tốt và khả năng chủ động nắm bắt công nghệ mới, tôi mong muốn tìm kiếm cơ hội trở thành Lập trình viên Mobile tại công ty. Tôi hướng tới việc viết ra những dòng code sạch (clean code), xây dựng các ứng dụng di động mượt mà, ít lỗi và có tính ứng dụng cao. Mục tiêu dài hạn của tôi là trở thành một Key Member trong đội ngũ phát triển, góp phần tạo ra những sản phẩm có hàng triệu lượt tải và giải quyết được vấn đề thực tế của người dùng.
+                </p>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Kỹ năng</h3>
+                <div class="skill-item">
+                    <div class="skill-name">Kỹ năng giao tiếp</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Kỹ năng đàm phán</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-name">Kỹ năng thuyết trình</div>
+                    <div class="progress-bar-bg">
+                        <div class="progress-bar-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-section" style="margin-bottom: 0;">
+                <h3 class="sidebar-title">Sở thích</h3>
+                <ul class="hobbies-list">
+                    <li>Đọc sách</li>
+                    <li>Nấu ăn</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            
+            <div class="main-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-lightbulb"></i></div>
+                    <h3 class="section-title">Học vấn</h3>
+                </div>
+                
+                <div class="item" style="margin-bottom: 10px;">
+                    <div class="item-header">
+                        <div class="item-title">Công nghệ thông tin</div>
+                        <div class="item-date">2024-2028</div>
+                    </div>
+                    <div class="item-subtitle">Đại học TopCV</div>
+                    <ul class="item-list">
+                        <li>Tốt nghiệp loại Giỏi</li>
+                        <li>Đạt học bổng 2025</li>
+                        <li>Đạt giải nhì nghiên cứu khoa học công nghệ</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="main-section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-users"></i></div>
+                    <h3 class="section-title">Kinh nghiệm làm việc</h3>
+                </div>
+                
+                <div class="item">
+                    <div class="item-header">
+                        <div class="item-title">Vị trí Thực tập sinh (Mobile Developer Intern)</div>
+                        <div class="item-date">(10/2025 - 03/2026)</div>
+                    </div>
+                    <div class="item-subtitle">Công ty Công nghệ [Tên công ty]</div>
+                    <ul class="item-list">
+                        <li>Trực tiếp tham gia vào dự án phát triển ứng dụng di động [Tên ứng dụng - ví dụ: E-commerce/Quản lý nhân sự] của công ty dưới sự hướng dẫn của các anh chị Senior.</li>
+                        <li>Chuyển đổi các thiết kế UI/UX từ Figma thành giao diện thực tế trên ứng dụng, đảm bảo tính responsive trên nhiều kích thước màn hình điện thoại khác nhau.</li>
+                        <li>Phối hợp với team Backend để gọi API, hiển thị dữ liệu động lên ứng dụng và xử lý các lỗi (bug) phát sinh trong quá trình kiểm thử.</li>
+                </div>
+
+                <div class="item">
+                    <div class="item-header">
+                        <div class="item-title">Nhà phát triển chính (Main Developer)</div>
+                        <div class="item-date">01/2025 - 06/2025</div>
+                    </div>
+                    <div class="item-subtitle">Ứng dụng [Tên ứng dụng - ví dụ: Đặt lịch khám bệnh / Quản lý chi tiêu]</div>
+                    <ul class="item-list">
+                       <li>Lên ý tưởng, phân tích yêu cầu hệ thống và thiết kế luồng người dùng (User Flow) cho ứng dụng di động phục vụ [đối tượng người dùng].</li>
+                       <li>Xây dựng toàn bộ kiến trúc Frontend cho ứng dụng bằng [Flutter / React Native / Swift], áp dụng các pattern quản lý trạng thái (State Management) như [Provider / Redux / BLoC].</li>
+                       <li>Tích hợp các dịch vụ của bên thứ ba (Third-party services) như Google Maps API để định vị, Firebase để gửi thông báo (Push Notification) và xác thực người dùng (Authentication).</li>
+                    </ul>
+                </div>
+
+                <div class="item" style="margin-bottom: 0;">
+                    <div class="item-header">
+                        <div class="item-title">Dự án cá nhân hoặc Freelance</div>
+                        <div class="item-date">2024 - 2025</div>
+                    </div>
+                    <div class="item-subtitle">Công ty CP TopCV</div>
+                    <ul class="item-list">
+                        <li>Tự nghiên cứu và phát triển thành công ứng dụng [chức năng ứng dụng - ví dụ: Theo dõi thói quen / Học từ vựng] từ con số không đến khi hoàn thiện.</li>
+                        <li>Tối ưu hóa hiệu năng ứng dụng, giảm thiểu tình trạng giật lag và tối ưu dung lượng tải xuống (App size).</li>
+                        <li>Thực hiện đóng gói ứng dụng và đưa thành công lên cửa hàng ứng dụng (Google Play Store / Apple App Store).</li>
+                        <li>Thu hút được [Số lượng, ví dụ: hơn 500+] lượt tải về tự nhiên trong tháng đầu tiên ra mắt và chủ động fix bug dựa trên phản hồi của người dùng thực tế.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
